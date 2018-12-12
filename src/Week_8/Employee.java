@@ -1,9 +1,5 @@
 package Week_8;
 
-/**
- * Created by u1874183 on 11/12/2018.
- */
-
 public class Employee {
 
     private int id;
