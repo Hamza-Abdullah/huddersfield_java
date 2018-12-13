@@ -5,6 +5,7 @@ import java.lang.Math;
 
 public class Club {
 
+	//Array list of all the members which are based on the Member class
     private ArrayList<Member> members;
 
     public Club() {
@@ -32,6 +33,7 @@ public class Club {
         return s;
     }
     
+	//Returns total contribution from all the members in the club
     public int totalCont(){
         int total = 0;
 
@@ -41,6 +43,8 @@ public class Club {
         return total;
     }
 
+	//Returns amount of turkeys that can be bought with the contributions.
+	//Type is an integer so it rounds down decimals, which is what we want.
     public int turkeys(){
         int turkeys = this.totalCont()/20;
         return turkeys;
@@ -48,13 +52,16 @@ public class Club {
 
     public static void main(String[] args) {
 
+		//Creates members
         Member gary = new Member("Gary", 27);
         Member tony = new Member("Tony", 21);
         Member rubiya = new Member("Rubiya", 20);
         Member steve = new Member("Steve", 28);
 
+		//Creates new club
         Club myMembers = new Club();
 
+		//Adds members to club
         myMembers.addMember(gary);
         myMembers.addMember(tony);
         myMembers.addMember(rubiya);
